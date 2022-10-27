@@ -12,10 +12,11 @@ def post_save_create_profile_receiver(sender, instance, created, **kwargs):
             profile.save()
         except:
             UserProfile.objects.create(user = instance)
-    print("User Profile created")
+    # print("User Profile created")
 
 @receiver(pre_save, sender = User)
 def pre_save_profile_receiver(sender, instance, **kwargs):
-    print("User saved")
+    # print("User saved")
+    pass
 
 # post_save.connect(post_save_create_profile_receiver,sender = User)
