@@ -16,7 +16,7 @@ def registerUser(request):
             user.set_password(password)
             user.role = User.CUSTOMER
             user.save()
-            messages.success(request, "Your account has been registered successfully!")
+            messages.error(request, "Your account has been registered successfully!")
             return redirect('registerUser')
         else:
             print("not valid")
@@ -26,3 +26,7 @@ def registerUser(request):
         'form': form,
     }
     return render(request, 'accounts/registerUser.html', context)
+
+
+def registerVendor(request):
+    return render(request, 'accounts/registerVendor.html')
