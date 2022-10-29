@@ -1,0 +1,14 @@
+{% autoescape off %}
+Hi {{user.first_name}},
+
+{% if is_approved %}
+Congratulations! 
+Your license has been verified and approved! Continue to the FoodyList Marketplace
+{% else %}
+We're sorry!
+Your restuarant has been blockd from using the FoodyList Marketplace. 
+If you think this is a mistake, contact our approval team.
+{% endif %}
+Thanks for your interest in FoodyList.
+Have a great day!
+{% endautoescape %}

@@ -104,3 +104,6 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.email
+    
+    def full_address(self):
+        return "{}, {}".format(self.address_line_1, self.address_line_2)

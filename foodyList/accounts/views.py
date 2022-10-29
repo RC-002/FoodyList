@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.http import urlsafe_base64_decode
+from vendor.models import Vendor
 
 #Restrict the vendor from accessing the customer Dashboard
 def check_user_vendor(user):
@@ -28,7 +29,7 @@ def check_user_customer(user):
 def registerUser(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are already logged in!')
-        return redirect('dashboard')
+        return redirect('myAccount')
     elif request.method == 'POST':
         # print(request.POST)
         form = UserForm(request.POST)
@@ -57,7 +58,7 @@ def registerUser(request):
 def registerVendor(request):
     if request.user.is_authenticated:
         messages.warning(request, 'You are already logged in!')
-        return redirect('dashboard')
+        return redirect('myAccount')
     elif request.method == 'POST':
         # store the data and create user
         form = UserForm(request.POST)
