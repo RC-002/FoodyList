@@ -13,3 +13,9 @@
     animation-duration: 5s;
     /* z-index: 99; */
 }
+
+.btn-info{
+    padding: 2px 1.75em !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+}

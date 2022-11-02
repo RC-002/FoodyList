@@ -42,7 +42,9 @@ def registerUser(request):
             user.save()
 
             #Send verification mail
-            send_verification_email(request, user)
+            mail_subject = 'Verify your account'
+            email_template = 'accounts/emails/account_verification_email.html'
+            send_verification_email(request, user, mail_subject, email_template) 
             messages.success(request, "Your account has been created! Wait for the confirmation email")
             return redirect('registerUser')
         else:
