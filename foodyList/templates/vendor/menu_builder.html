@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block content %}
-{% include 'includes/alerts.html' %}
 
 <!-- Main Section Start -->
 <div class="main-section">
@@ -17,6 +16,7 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="user-dashboard loader-holder">
+                        {% include 'includes/alerts.html' %}
                         <div class="user-holder">
                             <h5 class="text-uppercase">Build Your Food Menu</h5>
 							<hr>
