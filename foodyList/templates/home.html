@@ -71,7 +71,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="element-title align-left">
-						<h2>Top Restaurants</h2>
+						<h2>Nearby Restaurants</h2>
 						<p>Explore restaurants, bars, and cafés by locality</p>
 					</div>
 				</div>
@@ -82,9 +82,9 @@
 							<li class="has-border">
 								<figure>
 									{% if vendor.user_profile.profile_picture %}
-									<a href="#"><img src="{{ vendor.user_profile.profile_picture.url }}" height="125" class="attachment-full size-full wp-post-image" alt=""></a>
+									<a href="{% url 'vendor_detail' vendor.vendor_slug %}"><img src="{{ vendor.user_profile.profile_picture.url }}" height="125" class="attachment-full size-full wp-post-image" alt=""></a>
 									{% else %}
-									<a href="#"><img src="{% static 'images/default-profile.png' %}" height="125" class="attachment-full size-full wp-post-image" alt=""></a>
+									<a href="{% url 'vendor_detail' vendor.vendor_slug %}"><img src="{% static 'images/default-profile.png' %}" height="125" class="attachment-full size-full wp-post-image" alt=""></a>
 									{% endif %}
 								</figure>
 							</li>
@@ -103,7 +103,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="element-title align-center">
-						<h2>Choose From Most Popular Restaurants</h2>
+						<h2>Choose From Popular Restaurants</h2>
 						<p>Explore popular restaurants, bars, and cafés</p>
 					</div>
 				</div>
