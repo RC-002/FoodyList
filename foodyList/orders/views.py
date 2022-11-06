@@ -56,7 +56,11 @@ def place_order(request):
             order.order_number = generate_order_number(order.id)
             # order.vendors.add(*vendors_ids)
             order.save()
-            return redirect('place_order')
+            context = {
+                'order': order,
+                'cart_items': cart_items,
+            }
+            return render(request, 'orders/place_order.html', context)
         else:
             print(form.errors)
     return render(request, 'orders/place_order.html')
