@@ -192,7 +192,7 @@ def checkout(request):
         'country': user_profile.country,
         'state': user_profile.state,
         'city': user_profile.city,
-        'pin_code': user_profile.pincode,
+        'pincode': user_profile.pincode,
     }
     form = OrderForm(initial=default_values)
     context = {

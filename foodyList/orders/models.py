@@ -38,7 +38,7 @@ class Order(models.Model):
     country = models.CharField(max_length=15, blank=True)
     state = models.CharField(max_length=15, blank=True)
     city = models.CharField(max_length=50)
-    pin_code = models.CharField(max_length=10)
+    pincode = models.CharField(max_length=10)
     total = models.FloatField()
     tax_data = models.JSONField(blank=True, help_text = "Data format: {'tax_type':{'tax_percentage':'tax_amount'}}")
     total_tax = models.FloatField()
