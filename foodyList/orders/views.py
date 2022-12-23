@@ -64,3 +64,7 @@ def place_order(request):
         else:
             print(form.errors)
     return render(request, 'orders/place_order.html')
+
+
+def confirmation(request):
+    return render(request,"orders/confirmation.html")

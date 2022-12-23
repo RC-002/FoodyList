@@ -32,14 +32,10 @@
                                             <br>
                                             <div><a href="{% url 'checkout' %}" class="btn btn-outline-danger">Edit</a></div>
                                             <br>
-
-                                        </div>
-                                        
+                                        </div>                                        
                                     </div>
-
                                 </div>
-                            </div>
-                            
+                            </div>                            
                         </div>
                     </div>
                 </div>
@@ -100,6 +96,7 @@
                                                 </span>
                                             </li>
 
+                                            <a href="{% url 'confirmation' %}">
                                             {% if order.payment_method == 'PayPal' %}
                                             <!-- PayPal Checkout Button -->
                                             <div id="paypal-button-container">                                                
@@ -111,12 +108,11 @@
                                                 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                                             </div>
                                             {% endif %}
+                                            </a>
                                         </ul>
-                                    </div>
-                                    
+                                    </div>                                    
                                 </div>
-                            </div>
-                            
+                            </div>                            
                         </div>
                     </div>
                 </div>
